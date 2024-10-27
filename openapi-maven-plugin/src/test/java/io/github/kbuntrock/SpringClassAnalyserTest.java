@@ -151,8 +151,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestFive.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_list_long.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -160,8 +159,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestSix.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_extends.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -169,8 +167,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestSeven.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_extends_class_in_parameter.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	/**
@@ -185,8 +182,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestEight.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_extends_class_in_parameter_v2.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -194,8 +190,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestNine.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_reference_self_class.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -203,8 +198,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestTen.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_cross_reference.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -212,8 +206,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestTwelve.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_cross_reference_in_super_constructor.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -221,8 +214,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericityTestEleven.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/genericity_in_super_constructor.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -234,8 +226,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto/genericity/issue89"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/issue_89.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -247,8 +238,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto/genericity/issue95"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/issue_95.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -256,8 +246,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(FileUploadController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/file_upload.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -265,8 +254,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(StreamResponseController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/stream_download.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -274,8 +262,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TestEnumeration1Controller.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_1.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -283,8 +270,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TestEnumeration2Controller.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_2.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -292,8 +278,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TestEnumeration3Controller.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_3.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -301,8 +286,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TestEnumeration4Controller.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_4.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -310,8 +294,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TestEnumeration5Controller.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_5.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -319,8 +302,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TestEnumeration6Controller.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_6.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -331,8 +313,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		enumConfig.setCanonicalName(TerritoryEnum.class.getCanonicalName());
 		enumConfig.setValueField("code");
 		mojo.getApiConfiguration().setEnumConfigList(Arrays.asList(enumConfig));
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/enumeration_test_7.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -340,8 +321,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(TimeController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/time_objects.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -349,8 +329,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(MapController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/map_objects.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	/**
@@ -382,8 +361,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(NumberController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/numbers.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -391,8 +369,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(SpringPathEnhancementOneController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/springPathEnhancementOne.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -400,8 +377,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(OptionalController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/optional.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -413,8 +389,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/response-entity.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -426,8 +401,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/interface.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -465,8 +439,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(RecursiveDtoController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/recursive_dto.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -474,8 +447,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(RecursiveDtoInParameterController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/recursive_dto_in_parameter.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -487,8 +459,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/generic_recursive_dto.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -496,8 +467,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericRecursiveListDtoController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/generic_recursive_list_dto.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -505,8 +475,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericRecursiveInterfaceListDtoInParameterController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/generic_recursive_interface_list_dto.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -514,8 +483,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericRecursiveInterfaceDtoController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/generic_recursive_interface_dto.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -523,8 +491,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(GenericDataController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/generically_typed_controller.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -579,8 +546,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		whiteList.add(".*imeControl.*");
 		mojo.getApiConfiguration().setWhiteList(whiteList);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/white_list_class.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -592,8 +558,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		whiteList.add(".*ccountControl.*#.*lidateSession");
 		mojo.getApiConfiguration().setWhiteList(whiteList);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/white_list_class_method.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -601,21 +566,21 @@ public class SpringClassAnalyserTest extends AbstractTest {
 
 		final DocumentationMojo mojo = createBasicMojo(AccountController.class.getCanonicalName());
 		// Should filter on AccountController -> 4 methods in it
-		final List<String> whiteList = new ArrayList<>();
-		whiteList.add("#.*Account");
+		final List<String> whiteList = Collections.singletonList("#.*Account");
 		mojo.getApiConfiguration().setWhiteList(whiteList);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/white_list_method.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
+	}
 
-		final DocumentationMojo mojo2 = createBasicMojo(AccountController.class.getCanonicalName());
+	@Test
+	public void white_list_method2() throws MojoFailureException, IOException, MojoExecutionException {
+
+		final DocumentationMojo mojo = createBasicMojo(AccountController.class.getCanonicalName());
 		// Should filter on AccountController -> 4 methods in it
-		final List<String> whiteList2 = new ArrayList<>();
-		whiteList2.add(".*#.*Account");
-		mojo2.getApiConfiguration().setWhiteList(whiteList2);
+		final List<String> whiteList2 = Collections.singletonList(".*#.*Account");
+		mojo.getApiConfiguration().setWhiteList(whiteList2);
 
-		final List<File> generated2 = mojo2.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/white_list_method.yml", generated2.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -649,8 +614,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		mojo.getApiConfiguration().setBlackList(blackList);
 
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/white_list_method.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -665,8 +629,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		mojo.getApiConfiguration().setBlackList(blackList);
 
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/white_list_method.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -675,8 +638,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		final DocumentationMojo mojo = createBasicMojo(JsonIgnoreController.class.getCanonicalName());
 
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/json_ignore.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -684,24 +646,21 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		final DocumentationMojo mojo = createBasicMojo(AnnotatedController.class.getCanonicalName());
 		mojo.getApis().get(0).setTagAnnotations(Collections.singletonList("io.github.kbuntrock.resources.annotation.MyRestController"));
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/annotated_controller.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
 	public void collection() throws MojoFailureException, IOException, MojoExecutionException {
 		final DocumentationMojo mojo = createBasicMojo(CollectionController.class.getCanonicalName());
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/collection.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
 	public void package_private() throws MojoFailureException, IOException, MojoExecutionException {
 		final DocumentationMojo mojo = createBasicMojo("io.github.kbuntrock.resources.endpoint.spring.PackagePrivateResource");
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/package-private.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -709,8 +668,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		final DocumentationMojo mojo = createBasicMojo(CollectionController.class.getCanonicalName());
 		mojo.getApis().get(0).setExtraSchemaClasses(Collections.singletonList("io.github.kbuntrock.resources.dto.AccountDto"));
 		// The result should be the same as the white list method test
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/extra_classes.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -719,8 +677,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		final DocumentationMojo mojo = createBasicMojo(FirstEndpoint.class.getCanonicalName(),
 			SecondEndpoint.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/name_collision.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -730,8 +687,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			io.github.kbuntrock.resources.endpoint.namecollision.one.MyController.class.getCanonicalName(),
 			io.github.kbuntrock.resources.endpoint.namecollision.two.MyController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/tag_name_collision.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -755,8 +711,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto/jackson"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/jackson_json_property.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -765,8 +720,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		final DocumentationMojo mojo = createBasicMojo(
 			io.github.kbuntrock.resources.endpoint.optional.object.OptionalController.class.getCanonicalName());
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/optional_unmapping.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -775,8 +729,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		final CommonApiConfiguration commonApiConfiguration = new CommonApiConfiguration();
 		mojo.setApiConfiguration(commonApiConfiguration);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/nullable_default.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -787,8 +740,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		commonApiConfiguration.setNullableAnnotation(Arrays.asList("io.github.kbuntrock.resources.dto.nullable.MyNullable"));
 		mojo.setApiConfiguration(commonApiConfiguration);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/nullable_default_custom_annotation.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -798,8 +750,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		commonApiConfiguration.setDefaultNonNullableFields(true);
 		mojo.setApiConfiguration(commonApiConfiguration);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/nullable_default_non_nullable.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -811,8 +762,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		commonApiConfiguration.setNullableAnnotation(Arrays.asList("io.github.kbuntrock.resources.dto.nullable.MyNullable"));
 		mojo.setApiConfiguration(commonApiConfiguration);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/nullable_default_non_nullable_custom_annotation.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
     @Test
@@ -821,8 +771,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
         final CommonApiConfiguration commonApiConfiguration = new CommonApiConfiguration();
         mojo.setApiConfiguration(commonApiConfiguration);
 
-        final List<File> generated = mojo.documentProject();
-        checkGenerationResult("ut/SpringClassAnalyserTest/nullable_getters_setters.yml", generated.get(0));
+        checkGenerationResult(mojo.documentProject());
     }
 
     @Test
@@ -832,8 +781,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
         commonApiConfiguration.setDefaultNonNullableFields(true);
         mojo.setApiConfiguration(commonApiConfiguration);
 
-        final List<File> generated = mojo.documentProject();
-        checkGenerationResult("ut/SpringClassAnalyserTest/nullable_getters_setters_default_non_nullable.yml", generated.get(0));
+        checkGenerationResult(mojo.documentProject());
     }
 
 	@Test
@@ -845,8 +793,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/query_param_dto_binding.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -858,8 +805,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 				"src/test/java/io/github/kbuntrock/resources/dto"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/query_param_flat_mix_nested_binding.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
@@ -871,8 +817,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 			"src/test/java/io/github/kbuntrock/resources/dto"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/request_headers.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	@Test
