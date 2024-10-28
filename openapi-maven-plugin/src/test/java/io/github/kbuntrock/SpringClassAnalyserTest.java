@@ -828,8 +828,7 @@ public class SpringClassAnalyserTest extends AbstractTest {
 		javadocConfig.setScanLocations(Arrays.asList("src/test/java/io/github/kbuntrock/resources/endpoint/uuid"));
 		mojo.setJavadocConfiguration(javadocConfig);
 
-		final List<File> generated = mojo.documentProject();
-		checkGenerationResult("ut/SpringClassAnalyserTest/uuid.yml", generated.get(0));
+		checkGenerationResult(mojo.documentProject());
 	}
 
 	private ScanResult scanResult(Class<?> clazz) {
