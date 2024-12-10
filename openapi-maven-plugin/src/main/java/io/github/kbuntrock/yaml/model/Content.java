@@ -1,5 +1,7 @@
 package io.github.kbuntrock.yaml.model;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.github.kbuntrock.model.DataObject;
 import io.github.kbuntrock.model.ParameterObject;
 import io.github.kbuntrock.utils.OpenApiDataType;
@@ -13,7 +15,13 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class Content {
 
+	@JsonIgnore
 	private Schema schema;
+
+	@JsonIgnore
+	protected Object example;
+	@JsonIgnore
+	protected Object examples;
 
 	public static Content fromDataObject(final ParameterObject parameterObject) {
 
@@ -53,6 +61,38 @@ public class Content {
 
 	public Schema getSchema() {
 		return schema;
+	}
+
+	public Object getExample() {
+		return example;
+	}
+
+	public void setExample(Object example) {
+		this.example = example;
+	}
+
+	public Object getExamples() {
+		return examples;
+	}
+
+	public void setExamples(Object examples) {
+		this.examples = examples;
+	}
+
+	@JsonAnyGetter
+	public Map<String, Object> getJsonObject() {
+		final Map<String, Object> map = new LinkedHashMap<>();
+		if(schema != null) {
+			map.put("schema", schema);
+		}
+		if(example != null ) {
+			map.put("example", example);
+		}
+		if(examples != null ) {
+			map.put("examples", examples);
+		}
+
+		return map;
 	}
 
 }

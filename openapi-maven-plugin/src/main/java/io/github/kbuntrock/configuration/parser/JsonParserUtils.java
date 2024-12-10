@@ -73,4 +73,27 @@ public final class JsonParserUtils {
 		}
 	}
 
+	public static JsonNode mergeJsonArray (JsonNode jsonArray){
+		ObjectNode mergedNode = jsonObjectMapper.createObjectNode();
+		if (jsonArray.isArray()) {
+			for (JsonNode jsonNode : jsonArray) {
+				if (jsonNode.isObject()) {
+					jsonNode.fields().forEachRemaining(entry -> {
+						String fieldName = entry.getKey();
+						JsonNode fieldValue = entry.getValue();
+
+						// Adicionar ou substituir os valores no nó final
+						mergedNode.set(fieldName, fieldValue);
+					});
+				}
+			}
+		}
+		return mergedNode;
+	}
+	public static JsonNode encapsulate (String name, JsonNode jsonArray){
+		ObjectNode encapsulatedNode = jsonObjectMapper.createObjectNode();
+		encapsulatedNode.put(name, jsonArray);
+		return encapsulatedNode;
+	}
+
 }
