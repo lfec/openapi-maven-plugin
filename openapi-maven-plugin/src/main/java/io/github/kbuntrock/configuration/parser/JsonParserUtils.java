@@ -73,6 +73,7 @@ public final class JsonParserUtils {
 		}
 	}
 
+	/**In the case that the Json Node is a Array and it's needed to merge all elements as a one object*/
 	public static JsonNode mergeJsonArray (JsonNode jsonArray){
 		ObjectNode mergedNode = jsonObjectMapper.createObjectNode();
 		if (jsonArray.isArray()) {
@@ -81,8 +82,6 @@ public final class JsonParserUtils {
 					jsonNode.fields().forEachRemaining(entry -> {
 						String fieldName = entry.getKey();
 						JsonNode fieldValue = entry.getValue();
-
-						// Adicionar ou substituir os valores no nó final
 						mergedNode.set(fieldName, fieldValue);
 					});
 				}
@@ -90,9 +89,10 @@ public final class JsonParserUtils {
 		}
 		return mergedNode;
 	}
-	public static JsonNode encapsulate (String name, JsonNode jsonArray){
+	/**Create a new Json Node and then add the jsonNode as a Child*/
+	public static JsonNode encapsulate (String name, JsonNode jsonNode){
 		ObjectNode encapsulatedNode = jsonObjectMapper.createObjectNode();
-		encapsulatedNode.put(name, jsonArray);
+		encapsulatedNode.put(name, jsonNode);
 		return encapsulatedNode;
 	}
 

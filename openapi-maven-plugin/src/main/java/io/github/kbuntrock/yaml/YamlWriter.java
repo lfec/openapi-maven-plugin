@@ -504,6 +504,7 @@ public class YamlWriter {
 				if (example.isArray()) {
 					content.setExamples(JsonParserUtils.mergeJsonArray(example));
 				} else {
+					/**In the OpenApi the $ref can only by used inside the examples tag, thus needing to have a inner object*/
 					if (example.get("$ref")!=null){
 						content.setExamples(JsonParserUtils.encapsulate("ref", example));
 					}else {
